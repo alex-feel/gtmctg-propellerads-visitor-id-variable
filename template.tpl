@@ -54,11 +54,14 @@ ___TEMPLATE_PARAMETERS___
 
 ___SANDBOXED_JS_FOR_WEB_TEMPLATE___
 
+const queryPermission = require('queryPermission');
 const getUrl = require('getUrl');
 
 const visitorIdQueryParameterName = data.visitorIdQueryParameterName;
 
-return getUrl('query', false, null, visitorIdQueryParameterName);
+if (queryPermission('get_url', 'query', visitorIdQueryParameterName)) {
+  return getUrl('query', false, null, visitorIdQueryParameterName);
+}
 
 
 ___WEB_PERMISSIONS___
@@ -109,4 +112,4 @@ scenarios: []
 
 ___NOTES___
 
-Created on 16.11.2021, 16:08:59
+Created on 17.11.2021, 08:31:34
