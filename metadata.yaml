@@ -1,5 +1,7 @@
 homepage: "https://github.com/alex-feel/gtmctg-propellerads-visitor-id-variable"
 documentation: "https://github.com/alex-feel/gtmctg-propellerads-visitor-id-variable/blob/main/README.md"
 versions:
+  - sha: 4d21afefb578e4af578ea7d99184668ae6f10a1e
+    changeNotes: Add permission check for getUrl API
   - sha: 7525060dc0d000b2deee594a72624b560caaf072
     changeNotes: The very first version
